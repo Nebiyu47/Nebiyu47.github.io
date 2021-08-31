@@ -1,0 +1,32 @@
+.flag-first{
+    color:rgb(36, 170, 141)
+}
+.flag-second{
+    color: burlywood;
+}
+.flag-third{
+    color: rgb(146, 62, 230);
+}
+.flag-first,.flag-second,.flag-third{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color:slategray;
+    color:snow;
+}
+a{
+    color: salmon;
+    text-decoration: seagreen;
+}
+img{
+    width: 35%;
+}
+.movies-list{
+    font-family: 'Courier New', Courier, monospace;
+}
+p::first-letter{
+    font-size: 40px;
+}
