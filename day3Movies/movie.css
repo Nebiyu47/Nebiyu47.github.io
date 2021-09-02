@@ -8,7 +8,7 @@ body{
 }
 header>div{
     max-width: 960px;
-    margin: 0 auto;
+    margin: 10% auto;
 }
 header{
     background-image: url("images/bannerbg.png");
@@ -16,7 +16,7 @@ header{
 }
 #main-section {
     max-width: 960px;
-    margin: 0% auto;
+    margin: 0 auto;
 }
 #main-section>div{
     border:solid grey 1px;
