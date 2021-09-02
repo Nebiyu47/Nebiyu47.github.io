@@ -16,6 +16,7 @@ header{
 }
 #main-section {
     max-width: 960px;
+    margin: 0% auto;
 }
 #main-section>div{
     border:solid grey 1px;
@@ -36,6 +37,7 @@ header{
 }
 #main-body{
     width: 75%;
+    float: right;
 }
 
 #main-body>.main-body-header{
@@ -77,6 +79,7 @@ list-style-type:none;
 padding: 0%;
 }
 P#pagination{
+    padding: 0px;
     text-align: center;
 }
 div#validation{
