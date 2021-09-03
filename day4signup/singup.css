@@ -1,0 +1,53 @@
+body {
+	width: 500px;
+	margin: auto;
+    background-color: rgb(211, 197, 199);
+}
+
+.back {
+	vertical-align: center;
+}
+
+div {
+	margin: 20px;
+	position: relative;
+}
+
+fieldset {
+	background-color: rgb(245, 146, 162);
+	border-radius: 50px;
+	border: 0;
+}
+
+
+input[type=submit] {
+	background-color: #FE9177;
+	margin-left: 0px;
+}
+
+label {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(56, 10, 10);
+}
+
+label {
+	position: absolute;
+	width: 150px;
+	left: 0;
+}
+
+input {
+	margin-left: 140px;
+}
+
+select {
+	margin-left: 140px;
+}
+
+.right {
+	margin-left: 0;
+}
