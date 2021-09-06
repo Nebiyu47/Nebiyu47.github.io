@@ -1,8 +1,8 @@
 window.onload = function(){
-    document.getElementById("biggerBtn").onclick = fontTimer
+    document.getElementById("bigger").onclick = fontTimer
     document.getElementById("blingBox").onchange = checkBoxHandler
-    document.getElementById("malkovitchBtn").onclick = malkcheckHandler
-    document.getElementById("igpayBtn").onclick = piggify
+    document.getElementById("malkovichBtn").onclick = malkcheckHandler
+    document.getElementById("IgpayBtn").onclick = piggify
 };
 
 function fontTimer(){
@@ -13,10 +13,10 @@ var iterations = 5;
 
 function btnHandler(){
     if(iterations>0){
-        var txtArea = document.getElementById("txtArea");
+        var txtArea = document.getElementById("txttt");
         var style = window.getComputedStyle(txtArea,null).getPropertyValue('font-size');
         var fontSize = parseInt(style) +2;
-        document.getElementById("txtArea").style.fontSize = fontSize+ "pt";
+        document.getElementById("txttt").style.fontSize = fontSize+ "pt";
         iterations--;
     }
     else{
@@ -26,13 +26,13 @@ function btnHandler(){
 
 function checkBoxHandler(){
     var page = document.getElementById("page");
-    var txtArea = document.getElementById("txtArea");
+    var txtArea = document.getElementById("txttt");
     var checkBox = document.getElementById("blingBox");
     if(checkBox.checked === true){
         txtArea.style.fontWeight = "bold";
         txtArea.style.color = "green";
         txtArea.style.textDecoration = "underline";
-        page.style.backgroundImage = URL("")
+        page.style.backgroundImage = url("1000x-1.jpeg");
     }
     else{
         txtArea.style.fontWeight = "normal";
@@ -43,28 +43,56 @@ function checkBoxHandler(){
 }
 
 function malkcheckHandler(){
-    var txtArea = document.getElementById("txtArea");
-    var str = txtArea.nodeValue.split("Malkovich");
-    var txtValue = "Malkovich";
-    for(var i = 0;i<str.length;i++){
-        if(str[i].length>=5){
-            str[i] ="Malkovich";
-            txtValue = str.join("Malkovich");
+    var txtinput = document.getElementById("txttt");
+    var text=txtinput.value.trim();
+    var result='';
+    if(text.length>0){
+        var words=text.split(" ");
+        for(let i=0;i<words.length;i++){
+            let w=words[i].trim();
+            if(w.length>=5){
+                result+="Malkovich"+ " ";
+            }else{
+                result+=w+ " ";
+                
+            }
         }
+        txtinput.value=result;
+        
     }
-    document.getElementById("txtArea").value = txtValue;
 }
 
 function piggify(){
-    var txtArea = document.getElementById("txtArea");
-    var str = txtArea.value.toLowerCase();
-    var st = "";
-    for(var j=0;j<str.length;j++){
-        if("aeiouAEIOU".indexOf(str.charAt(j))!==-1){
-            st = st + str.substr(j,str.length);
-            st = st + str.substr(0,j) + "ay";
-            break;
+    var txtinput = document.getElementById("txttt");
+    var text=txtinput.value.trim();
+    var result='';
+    if(text.length>0){
+        var words=text.split(" ");
+        for(let i=0;i<words.length;i++){
+            let w=words[i].trim();
+            let tempw=translatePigLatin(w);
+            result+=tempw+" ";
         }
+        txtinput.value=result;
+        
     }
-    document.getElementById('txtArea').value = st;
+}
+
+function firstIsVowel(s) {
+    return ['a', 'e', 'i', 'o', 'u'].indexOf(s[0].toLowerCase()) !== -1
+}
+
+function translatePigLatin(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let newStr = "";
+
+    if (vowels.indexOf(str[0]) > -1) {
+        newStr = str + "ay";
+        return newStr;
+    } else {
+        let firstMatch = str.match(/[aeiou]/g) || 0;
+        let vowel = str.indexOf(firstMatch[0]);
+        newStr = str.substring(vowel) + str.substring(0, vowel) + "ay";
+        return newStr;
+    }
 }

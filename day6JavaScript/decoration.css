@@ -4,7 +4,9 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
-
+.bodybk{
+    background-image: url('1000x-1.jpeg');
+}
 #header{
     text-align: center;
     margin-bottom: 1em;
