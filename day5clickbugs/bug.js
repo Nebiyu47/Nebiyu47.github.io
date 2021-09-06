@@ -1,3 +1,3 @@
 function gogogo(){
-    alert('yay, its works');
+    alert("yay, its works");
 }
