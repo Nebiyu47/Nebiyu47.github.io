@@ -1,0 +1,36 @@
+body{
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(224, 142, 218);
+    font-size: 5pt; 
+}
+header{
+    font-size: 32pt;
+    font-weight: bolder;
+    margin: 0px;
+}
+#textarea{
+margin-left: auto;
+margin-right: auto;
+font-family: monospace;
+font-weight: bold;
+font-size: 13pt;
+width: 80%;
+height: 300px;
+}
+fieldset{
+    border: 5px solid black;
+}
+select{
+    width: 30%;
+}
+legend{
+    text-align: left;
+    font-size: 10px;
+}
+button{
+    width:25%;
+    font-size: 20px;
+}
