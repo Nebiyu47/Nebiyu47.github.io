@@ -1,49 +1,50 @@
 <!DOCTYPE html>
+<html lang="en-US">
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8"> 
-        <title>
-            ASCII Animation
-        </title>
-        <link href="ASCIIAnimation.css" type="text/css" rel="stylesheet">
-        <script src="ASCIIAnimation.js" type="text/javascript"></script>
-      <script src="ASCII.js" type="text/css"></script>
-    </head>
-    <body>
-        <header>
-            CSE 190 M, Homework 6: ASCIImation
-        </header>
-        <div>
-            <textarea id="textarea" cols="70" rows="20"></textarea>
-            <fieldset>
-                <legend>play controls</legend>
-                <button id="start">start</button>
-                <button id="stop"> stop</button>
-            </fieldset>
-            <fieldset>
-                <legend> Animation</legend>
-                <select id="select">
-                    <option selected="selected" value="blank">blank</option>
-                    <option value="exercise">Exercise</option>
-                    <option value="bike">bike</option>
-                    <option value="dive">dive</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <legend>Size</legend>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>ASCIImation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ASCIIAnimation.css" type="text/css" rel="stylesheet">
+    <script src="ASCIIAnimation.js"></script>
+    <script src="ASCII.js"></script>
+</head>
 
-                <select id="select">
-                
-                <option value="larg">larg</option>
-                <option selected="medium" value="medium">medium</option>
-                <option value="small">small</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <legend>Spee</legend>
-                <input id="checkbox" type="checkbox" >turbo
-            </fieldset>
-        </div>
-    </body>
+<body>
+    <header>CS472: ASCII Animation Viewer</header>
+    <div>
+        <textarea id="text-area" cols="80" rows="20"></textarea>
+        <fieldset>
+            <legend>Play Controls:</legend>
+            <button id="start">Start</button>
+            <button id="stop" disabled="">Stop</button>
+        </fieldset>
+        <fieldset>
+            <legend>Animation:</legend>
+            <select id="animation">
+                <option selected="selected" value="Blank">Blank</option>
+                <option value="Exercise">Exercise</option>
+                <option value="Juggler">Juggler</option>
+                <option value="Bike">Bike</option>
+                <option value="Dive">Dive</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Size:</legend>
+            <select id="fontsize">
+                <option value="7pt">Tiny</option>
+                <option value="10pt">Small</option>
+                <option value="12pt" selected="selected">Medium</option>
+                <option value="16pt">Large</option>
+                <option value="24pt">Extra Large</option>
+                <option value="32pt">XXL</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Speed:</legend>
+            <label><input id="turbo" type="checkbox">Turbo</label>
+        </fieldset>
+ 
+</body>
+
 </html>
