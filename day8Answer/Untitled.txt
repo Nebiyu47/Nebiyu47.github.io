@@ -30,14 +30,71 @@ Body of function is enclosed in Curly braces
 4. What does 'this' refer to when used in a JavaScript method?
 'this' refers to the owner object.
 5. What does 'this' refer to when used in a JavaScript constructor function?
-'this' refers to the global object.
+ANS 
+In a constructor function this does not have a value. 
+It is a substitute for the new object. 
+The value of this will become the new object when a new object is created.
 6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.
 When f is called by x.f( ), what does 'this' refer to?
+ANS
+'this' refers to the object x
 7. What is a free variable in JavaScript?
+ANS
+A variable referred to by a function that is not one of its parameters or local variables
 8. Create an object that has properties with name = "fred" and major="music" and a property that is a function
 that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+ANS
+var obj={
+    "name": "fred",
+    "major":"music",
+    "f":function(x,y){
+        if(x>y){
+            return y;
+        }else if(x<y){
+            return x;
+        }else{
+            return (x*x)+(y*y);
+        }
+    }
+
 9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.
 Employee objects have the following fields: name, salary, position.
+ANS
+function Employee(name, salary, position) {
+  this.name = name;
+  this.salary = salary;
+  this.position = position;
+}
+var frank = new Employee("Frank Lampard", 80000, "Director");
+var ken = new Person("Ken Jones", 90000, "Manager");
+var afe = new Person("Afework Fita", 180000, "Senior software engineer");
 10. Write a Javascript function that takes any number of input arguments and returns the product of the
 arguments.
-11. Write an arrow function that returns the maximum of its three input arguments
+ANS
+function anyProduct(...n){
+    let product;
+    for(let i=0;i<n.length; i++){
+        product *=n[i];
+    }
+    return product;
+}
+
+11. Write an arrow function that returns the maximum of its three input arguments.
+
+Answer:
+
+var maxOfThree=(num1,num2,num3)=>{
+    let largest;
+    if(num1 >= num2 && num1 >= num3) {
+        largest = num1;
+    }
+    else if (num2 >= num1 && num2 >= num3) {
+        largest = num2;
+    }
+    else {
+        largest = num3;
+    }
+
+   return largest;
+};
+
