@@ -183,6 +183,7 @@ Module=(function(){
     let name,age,salary;
 
     return {
+
         getName:function () {
             return name; 
         },
