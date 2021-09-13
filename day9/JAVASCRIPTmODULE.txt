@@ -37,7 +37,7 @@ function XFunc () {
 };
 
 Answer:
-============================================
+
 
 (a) Do statements in Scope A have access to variables defined in Scope B and C? NO
 (b) Do statements in Scope B have access to variables defined in Scope A? YES
@@ -55,7 +55,7 @@ document.write(myFunction()); //25
 
 Answer:
 81 25
-============================================
+
 5.
 var foo = 1;
 function bar() {
@@ -67,7 +67,6 @@ function bar() {
 bar();
 Answer:
 10
-============================================
 
 What will the alert print out? (Answer without running the code. Remember ‘hoisting’.)? 
 6. Consider the following definition of an add( ) function to increment a counter variable:
@@ -270,7 +269,7 @@ Module.getAddress=function(){
 Module.setAddress=function(newAddress){
     this.address=newAddress;
 };
-============================================
+
 14. What is the output of the following code?
 const promise = new Promise((resolve, reject) => { reject("Hattori");
 });
@@ -278,7 +277,7 @@ promise.then(val => console.log("Success: " + val)) .catch(e => console.log("Err
 
 Answer: 
 Error: Hattori
-============================================
+
 15. What is the output of the following code?
 const promise = new Promise(
     (resolve, reject) => { 
