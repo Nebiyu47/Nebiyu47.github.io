@@ -1,0 +1,27 @@
+body,h1,h2{
+  font-weight: 90px;
+  text-align: center;
+  font-size: 50px;
+  font-style: oblique;
+
+}
+#serachText{
+    font-size: 75px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: rgb(178, 199, 236);
+}
+#lookup{
+    font-size: 40px;
+    font-weight: bold;
+    background-color: rgb(46, 165, 42);
+    font-style: inherit;
+    border-style:groove;
+
+}
+#result{
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    border-radius: 50px;
+}
